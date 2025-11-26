@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "psr";
+  src: url('../fonts/ProductSans-Regular.ttf');
+}
+@font-face {
+  font-family: "nohints";
+  src: url('../fonts/GoogleSans-Regular.nohints.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "nohints";
+}
+body {
+  background-color: #131f32;
+  color: white;
+  font-size: 0.9rem;
+}
+
+header {
+  padding: 25px;
+  border-bottom: 5px solid olive;
+  background: linear-gradient(140deg, #131d24, #124f43);
+}
+
+header > h1 {
+  color: orange;
+  font-size: 3.6rem;
+  font-family: 'Arial', sans-serif;
+}
+
+header > p {
+  font-family: 'monospace', sans-serif;
+  letter-spacing: 0.8px;
+  color: lightblue;
+}
+
+.search-view {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.search-view > input {
+  width: 98%;
+  padding: 10px 0 0 10px;
+  font-size: 1.rem;
+  background: transparent;
+  border: none;
+  color: lavender;
+  border-bottom: 4px solid slategrey;
+  text-align: center;
+}
+.search-view > button {
+  width: 15%;
+  padding: 10px;
+  color: slategrey;
+  background: none;
+  border: none;
+}
+.list-title {
+  height: 80vh;
+  padding: 10px;
+  /*border: 1px solid white;*/
+  overflow-y: auto;
+  justify-content: center;
+}
+.display-title {
+  border-radius: 10px;
+  width: 95%;
+  padding: 10px;
+  background: linear-gradient(275deg,#FF4DAE, #F42FFF, #B910FF);
+  margin-top: 1vh;
+  border-bottom: ;
+}
+
+.h4 {
+  font-size: 1.2rem;
+  padding: ;
+  color: lime;
+}
+.end {
+  display: flex;
+  gap: 30px;
+  width: 98%;
+  justify-content: right;
+  color: lightblue;
+  font-size: 0.9rem;
+  text-decoration: ;
+}
+.teacher {
+  color: blue;
+}
+.lang {
+  color: yellow;
+}
+
+
+.show-code {
+  border-radius: 10px;
+  width: 95%;
+  padding: 10px;
+  background-color: #2E3133;
+  margin-top: 15px;
+  
+}
+
+.code-box {
+  /*padding: 10px;
+  background-color: grey;
+  color: silver;
+  border-radius: 10px;
+  margin: 10px;
+  white-space: pre;/*
+  max-height: 60vh;
+  font-family: 'monospace';
+  overflow-y: auto;
+  overflow-x: auto;*/
+  
+
+}
+.checkboxed {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.rem;
+}
+
+input[type^="checkbox"] {
+  margin: 14px;
+  border: 1px solid azure;
+  background-color: transparent !important;
+}
+
+code {
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: auto;
+  font-family: 'monospace' !important;
+}
+div[class*="icon-"] {
+  background-color: grey;
+  width: 90%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  justify-self: center;
+  font-size: 1.2rem;
+  color: lightskyblue;
+  background: #FF4DAE;
+  /*background: linear-gradient(75deg,#FF4DAE, #F42FFF);*/
+}
