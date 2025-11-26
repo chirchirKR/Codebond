@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Code Bond</title>
+  <meta name="author" content="Kim Chacha"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+  <!-- Prism Dracula Theme -->
+  <!--link href="https://unpkg.com/prism-themes/themes/prism-dracula.css" rel="stylesheet" /-->
+  <link href="/storage/emulated/0/Documents/prism/src/themes/okaidia.css" rel="stylesheet"/>
+  <link href="/storage/emulated/0/Documents/prism/src/plugins/line-numbers/line-numbers.css" rel="stylesheet"/>
+  <!-- Prism Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- Prism languages (add more if needed) -->
+  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script-->
+  <script src="/storage/emulated/0/Download/prism-javascript.min.js"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
+  <script type="text/javascript" src="/storage/emulated/0/Documents/prism/src/plugins/line-numbers/line-numbers.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Code Bond</h1>
+    <p><span>Help a friend </span>,<span> Create a bond</span></p>
+  </header>
+  <section class="body-view">
+    <!--div class="checkboxed">
+        <!--p>Search By: </p>
+        <p onclick="searchBy(this.innerText)">Authors<input type="checkbox"/></p>
+        <p onclick="searchBy(this.innerText)">Language<input type="checkbox"/></p>
+        <p onclick="searchBy(this.innerText)">Title<input type="checkbox"/></p>
+        <p onclick="searchBy(this.innerText)">Id<input type="checkbox"/></p>
+      </div-->
+    <div class="search-view">
+      <input type="search" class="-input-" placeholder="Copy Code by clicking it"/>
+      <!--button>Search</button-->
+    </div>
+    <div class="list-title" >
+      
+<div class="display-title" id="sum_tim">
+<h4 class="h4">Summation of two numbers</h4>
+<div class="code-box" id="sum_tim_code">
+<pre id="sumt" onclick="copyToClipboard(this.id)"><code class="language-javascript">
+function add(a,b) {
+  return a + b;
+}
+
+console.log( add(5,6) ) // 11
+</code></pre>   
+  <!--div class="icon-images"><p>Copy</p></div-->  
+  
+</div>
+<div class="end"><p class="teacher">Kym Chacha -<span class="lang">Javascript</span></p></div>
+</div>
+      
+<div class="display-title" id="sum_tim">
+<h4 class="h4">A function that arrange cases e.g <code>"deRiCk"</code> to <code>"Derick"</code></h4>
+<div class="code-box">
+<pre class="line-numbers" data-start="1" id="sumt2" onclick="copyToClipboard(this.id)"><code class="language-javascript">
+/** This function
+  * Returns a the same parameter if not type of a string
+  * Trims the start of a word 
+  * Returns an arranged Case 
+**/
+function _Tt(word) {
+  if (typeof word !== "string") return word;
+  try {
+    word = word.trimStart().toLowerCase();
+    let __start__ = word.slice(0,1);
+    let __end__ = word.slice(1, word.length);
+    return (__start__.toUpperCase() + __end__);
+  } catch(err) {
+    console.error(err);
+    return word;
+  }
+}
+
+console.log(_Tt("derICk")); // Derick
+</code></pre>   
+  <!--div class="icon-images"><p>Copy</p></div-->  
+  
+</div>
+<div class="end"><p class="teacher">Kym Chacha -<span class="lang">Javascript</span></p></div>
+</div>
+      
+<div class="display-title" id="sum_tim">
+<h4 class="h4">Get users age automatically by just getting their date of birth</h4>
+<div class="code-box" id="">
+<pre id="der_17" onclick="copyToClipboard(this.id)"><code class="language-javascript">
+let user = {
+  name: "",
+  username: "",
+  email: "",
+  joined: "",
+  age: "",
+  dob(m) {
+    const _yr = 31_536_000_000;
+    const _now = Date.now();
+    const _user = new Date(m).getTime();
+    const _dob = Math.trunc(((_now - _user) / _yr));
+    this.age = _dob;
+  }
+}
+
+let [name, username, email, joined, _dob] = ["Derick", "@_derick7", "example@gmail.com", Date.now(),  "2004-12-7"];
+
+user.name = name, user.username = username, user.email = email, user.joined = joined, user.dob(_dob);
+
+console.log(user.age); // 20
+
+</code></pre>   
+  <!--div class="icon-images"><p>Copy</p></div-->  
+  
+</div>
+<div class="end"><p class="teacher">Kym Chacha -<span class="lang">Javascript</span></p></div>
+</div>
+      
+      
+<div class="display-title" id="sum_tim">
+<h4 class="h4">Get Time in AM or PM using Javascript</h4>
+  <a href="kym_chirchir"></a>
+<div class="code-box" id="sum_tim_code">
+  
+<pre id="kym_chir" onclick="copyToClipboard(this.id)"><code  class="language-javascript">
+
+let d = new Date(), h = d.getHours(), min = d.getMinutes(), mdf = '', hm = h % 12, str_hr = hm;
+
+(min < 10) ? mdf = '0' : mdf = '';
+let show = ` : ${mdf}${min} `;
+let mid = "PM";
+
+if (h > 0 && h < 12) {
+  str_hr = hm;
+  mid = "AM";
+}
+
+else if (h > 12 && h < 24) {
+  str_hr = hm;
+  mid = "PM";
+}
+
+else if (h === 0) {
+ str_hr = 12;
+ mid = "AM";
+}
+
+else {
+ str_hr = 12; mid = "PM"
+}
+
+show = str_hr + show + mid;
+
+console.log(show);
+</code></pre>  
+  <!--div class="icon-images"><p></p></div-->  
+</div>
+<div class="end"><p class="teacher">Kym Chacha -<span class="lang">Javascript</span></p></div>
+</div>
+      
+    </div>
+  </section>
+</body>
+</html>
